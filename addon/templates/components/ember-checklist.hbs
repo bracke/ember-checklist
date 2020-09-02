@@ -1,0 +1,11 @@
+<ul style={{ulStyle}}>
+	{{#each collection as |item|}}
+		<li style={{liStyle}}>
+			<div class="{{checkboxClass}}">
+				<label>
+					<input type="checkbox" checked={{belongs-to selected=selected item=item}} {{action 'alterRelation' (belongs-to selected=selected item=item) item preventDefault=false}}> {{property-value item=item property=property}}
+				</label>
+			</div>
+		</li>
+	{{/each}}
+</ul>
